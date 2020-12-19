@@ -128,13 +128,17 @@ export default function App() {
           ))}
         </div>
         <hr />
-        <div style={{ textAlign: "center" }}>
+        <div style={{ textAlign: "left" }}>
           <ul style={{ paddingInlineStart: "0" }}>
             {bookDB[selectedGenre].map((book) => (
               <li className="list" key={book.name}>
                 {" "}
-                <div style={{ fontSize: "larger" }}> {book.name} </div>
-                <div style={{ fontSize: "smaller" }}> {book.rating} </div>
+                <div style={{ fontSize: 50 }}> {book.name} </div>
+                <div style={{ fontSize: "smaller" }}>
+                  {" "}
+                  Rating-{" "}
+                  <span style={{ fontSize: "smaller" }}> {book.rating} </span>
+                </div>
               </li>
             ))}
           </ul>
